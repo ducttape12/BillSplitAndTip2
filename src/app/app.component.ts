@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'billsplit2';
+
+  billTotal: number;
+  tipFrom: number;
+
+  constructor() {
+    this.billTotal = 13.37;
+    this.tipFrom = 1.337;
+  }
 }
