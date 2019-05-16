@@ -1,7 +1,8 @@
-<label for="basic-url">{{fieldDescription}}</label>
+<label [for]="id">{{fieldDescription}}</label>
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="{{id}}-price-symbol">$</span>
+    <span class="input-group-text" [id]="id + '-price-symbol'">$</span>
   </div>
-  <input type="text" class="form-control" id="{{id}}" [attr.aria-describedby]="id+'-price-symbol'" placeholder="0.00" [(ngModel)]="price"/>
+  <input type="number" class="form-control" [id]="id" [attr.aria-describedby]="id+'-price-symbol'" placeholder="0.00"
+    [ngModel]="price" (ngModelChange)="priceChanged($event)" min="0" />
 </div>

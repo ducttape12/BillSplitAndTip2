@@ -17,4 +17,13 @@ export class PriceEntryComponent implements OnInit {
   ngOnInit() {
   }
 
+  priceChanged(newPrice: number): void {
+    this.price = newPrice;
+    
+    if(this.price < 0) {
+      this.price = 0;
+    }
+
+    this.priceChange.emit(this.price);
+  }
 }
