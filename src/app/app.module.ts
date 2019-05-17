@@ -7,6 +7,7 @@ import { PriceEntryComponent } from './price-entry/price-entry.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { SummaryComponent } from './summary/summary.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     PriceEntryComponent,
     DropdownComponent,
     SummaryComponent,
-    NavBarComponent
+    NavBarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
