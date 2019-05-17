@@ -11,21 +11,23 @@ export class AppComponent {
   billTotal: number;
   tipFrom: number;
 
-  tipPercentages: number[];
+  tipPercentages: number[] = [0, 5, 10, 13, 15, 18, 20, 23, 25, 28, 30];
   selectedPercentage: number;
 
-  waysToSplit: number[];
+  waysToSplit: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   selectedSplit: number;
 
   billTotalError: boolean = false;
   tipFromError: boolean = false;
 
   constructor() {
-    this.billTotal = 0;
-    this.tipFrom = 0;
-    this.tipPercentages = [0, 5, 10, 13, 15, 18, 20, 23, 25, 28, 30];
+    this.initializeProperties();
+  }
+
+  initializeProperties(): void {
+    this.billTotal = undefined;
+    this.tipFrom = undefined;
     this.selectedPercentage = 20;
-    this.waysToSplit = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     this.selectedSplit = 1;
   }
 
