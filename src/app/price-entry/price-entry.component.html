@@ -6,3 +6,7 @@
   <input type="number" class="form-control" [id]="id" [attr.aria-describedby]="id+'-price-symbol'" placeholder="0.00"
     [ngModel]="price" (ngModelChange)="priceChanged($event)" min="0" />
 </div>
+
+<div *ngIf="error" class="alert alert-danger" role="alert">
+  {{fieldDescription}} must be numeric and greater than 0.
+</div>

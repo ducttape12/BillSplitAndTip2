@@ -1,9 +1,13 @@
-<app-price-entry id="total" field-description="Bill Total" [(price)]="billTotal"></app-price-entry>
-<app-price-entry id="tip-from" field-description="Amount to Tip From" [(price)]="tipFrom"></app-price-entry>
+<app-price-entry id="total" field-description="Bill Total" [(price)]="billTotal" (errorChange)="billTotalError = $event">
+</app-price-entry>
+<app-price-entry id="tip-from" field-description="Amount to Tip From" [(price)]="tipFrom" (errorChange)="tipFromError = $event">
+</app-price-entry>
 
 <app-dropdown id="percentage" label="Percent to Tip" option-postfix="%" [(options)]="tipPercentages"
     [(selected)]="selectedPercentage"></app-dropdown>
 <app-dropdown id="split" label="Ways to Split" [(options)]="waysToSplit" [(selected)]="selectedSplit"></app-dropdown>
 
-<app-summary [tip-owed]="tipOwed()" [total-owed]="totalOwed()" [owed-per-person]="owedPerPerson()"
-    [owed-by-others]="owedByOthers()" [bill-is-split]="isBillSplit()"></app-summary>
+<div *ngIf="!billTotalError && !tipFromError">
+    <app-summary [tip-owed]="tipOwed()" [total-owed]="totalOwed()" [owed-per-person]="owedPerPerson()"
+        [owed-by-others]="owedByOthers()" [bill-is-split]="isBillSplit()"></app-summary>
+</div>

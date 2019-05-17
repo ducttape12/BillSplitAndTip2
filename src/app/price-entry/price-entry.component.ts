@@ -10,8 +10,12 @@ export class PriceEntryComponent implements OnInit {
   @Input() id: string;
   @Input() price: number;
   @Output() priceChange = new EventEmitter<number>();
+  @Output() errorChange = new EventEmitter<boolean>();
+
+  error: boolean;
 
   constructor() {
+    this.error = false;
   }
 
   ngOnInit() {
@@ -19,11 +23,9 @@ export class PriceEntryComponent implements OnInit {
 
   priceChanged(newPrice: number): void {
     this.price = newPrice;
-    
-    if(this.price < 0) {
-      this.price = 0;
-    }
+    this.error = this.price < 0;
 
     this.priceChange.emit(this.price);
+    this.errorChange.emit(this.error);
   }
 }

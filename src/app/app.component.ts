@@ -17,6 +17,9 @@ export class AppComponent {
   waysToSplit: number[];
   selectedSplit: number;
 
+  billTotalError: boolean = false;
+  tipFromError: boolean = false;
+
   constructor() {
     this.billTotal = 0;
     this.tipFrom = 0;
