@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { faMoneyBillWave } from '@fortawesome/free-solid-svg-icons';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { faMoneyBillWave, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,11 +7,18 @@ import { faMoneyBillWave } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent implements OnInit {
-  faMoneyBillWave = faMoneyBillWave;
+  appIcon = faMoneyBillWave;
+  resetIcon = faTrashAlt;
+
+  @Output() clear = new EventEmitter<any>();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  clearScreen(): void {
+    this.clear.emit();
   }
 
 }

@@ -31,6 +31,10 @@ export class AppComponent {
     this.selectedSplit = 1;
   }
 
+  clearScreen(): void {
+    this.initializeProperties();
+  }
+
   tipOwed(): number {
     return this.tipFrom * (this.selectedPercentage / 100);
   }
