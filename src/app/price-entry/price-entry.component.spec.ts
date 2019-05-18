@@ -26,14 +26,6 @@ describe('PriceEntryComponent', () => {
         expect(component).toBeTruthy();
     });
 
-    it('should set the price to the newPrice when priceChanged is called', () => {
-        component.price = 12;
-
-        component.priceChanged(13);
-
-        expect(component.price).toBe(13);
-    });
-
     it('should set the error to false when a price of 0 is set', () => {
         component.priceChanged(0);
 

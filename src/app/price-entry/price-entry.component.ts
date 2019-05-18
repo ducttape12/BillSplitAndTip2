@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-price-entry',
@@ -8,7 +8,12 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class PriceEntryComponent implements OnInit {
   @Input('field-description') fieldDescription: string;
   @Input() id: string;
-  @Input() price: number;
+  
+  _price: number;
+  @Input() set price(value: number) {
+    this.updatePriceAndErrorStatus(value);
+  }
+
   @Output() priceChange = new EventEmitter<number>();
   @Output() errorChange = new EventEmitter<boolean>();
 
@@ -21,11 +26,15 @@ export class PriceEntryComponent implements OnInit {
   ngOnInit() {
   }
 
-  priceChanged(newPrice: number): void {
-    this.price = newPrice;
-    this.error = this.price < 0;
+  private updatePriceAndErrorStatus(newPrice: number) {
+    this._price = newPrice;
+    this.error = this._price < 0;
+  }
 
-    this.priceChange.emit(this.price);
+  priceChanged(newPrice: number): void {
+    this.updatePriceAndErrorStatus(newPrice);
+
+    this.priceChange.emit(this._price);
     this.errorChange.emit(this.error);
   }
 }
