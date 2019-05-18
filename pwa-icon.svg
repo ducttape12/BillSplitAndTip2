@@ -15,7 +15,10 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   sodipodi:docname="pwa-icon.svg">
+   sodipodi:docname="pwa-icon.svg"
+   inkscape:export-filename="C:\Users\Keith\projects\BillSplitAndTip2\src\assets\icons\icon-512x512.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -26,7 +29,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="250.22732"
+     inkscape:cx="224.15589"
      inkscape:cy="283.15327"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -64,6 +67,28 @@
          id="tspan3724"
          x="16.244137"
          y="260.16016"
-         style="fill:#78c2ad;fill-opacity:1;stroke-width:2.05956769"></tspan></text>
+         style="fill:#000000;fill-opacity:1;stroke-width:2.05956769"></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:88.08475494px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.20211911"
+       x="12.680362"
+       y="262.29843"
+       id="text3726-3-7"><tspan
+         sodipodi:role="line"
+         id="tspan3724-9-4"
+         x="12.680362"
+         y="262.29843"
+         style="fill:#000000;fill-opacity:1;stroke-width:2.20211911"></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:86.16247559px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.15406179"
+       x="13.881786"
+       y="261.57758"
+       id="text3726-3"><tspan
+         sodipodi:role="line"
+         id="tspan3724-9"
+         x="13.881786"
+         y="261.57758"
+         style="fill:#ffffff;fill-opacity:1;stroke-width:2.15406179"></tspan></text>
   </g>
 </svg>
