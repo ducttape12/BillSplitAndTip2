@@ -6,8 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'BillSplitAndTip2';
-
   billTotal: number;
   tipFrom: number;
 
@@ -29,10 +27,6 @@ export class AppComponent {
     this.tipFrom = undefined;
     this.selectedPercentage = 20;
     this.selectedSplit = 1;
-  }
-
-  clearScreen(): void {
-    this.initializeProperties();
   }
 
   tipOwed(): number {

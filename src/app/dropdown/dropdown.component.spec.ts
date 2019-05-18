@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FormsModule } from '@angular/forms';
 import { DropdownComponent } from './dropdown.component';
 
 describe('DropdownComponent', () => {
@@ -8,9 +8,12 @@ describe('DropdownComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DropdownComponent ]
+      declarations: [DropdownComponent],
+      imports: [
+        FormsModule
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -30,6 +33,6 @@ describe('DropdownComponent', () => {
 
     component.optionSelected();
 
-    expect(component.selectedChange).toHaveBeenCalledWith(selectedValue);
+    expect(component.selectedChange.emit).toHaveBeenCalledWith(selectedValue);
   });
 });

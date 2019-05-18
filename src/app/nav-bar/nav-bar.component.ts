@@ -20,5 +20,4 @@ export class NavBarComponent implements OnInit {
   clearScreen(): void {
     this.clear.emit();
   }
-
 }
