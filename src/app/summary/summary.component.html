@@ -2,19 +2,19 @@
   <tbody>
     <tr class="table-info">
       <td>Tip Owed:</td>
-      <td>{{tipOwed | currency:'USD':'symbol'}}</td>
+      <td class="text-right">{{tipOwed | currency:'USD':'symbol'}}</td>
     </tr>
     <tr class="table-success">
       <td>Total Owed:</td>
-      <td>{{totalOwed | currency:'USD':'symbol'}}</td>
+      <td class="text-right">{{totalOwed | currency:'USD':'symbol'}}</td>
     </tr>
     <tr class="table-dark" *ngIf="billIsSplit">
       <td>Owed Per Person:</td>
-      <td>{{owedPerPerson | currency:'USD':'symbol'}}</td>
+      <td class="text-right">{{owedPerPerson | currency:'USD':'symbol'}}</td>
     </tr>
     <tr class="table-secondary" *ngIf="billIsSplit">
       <td>Total Owed by Others:</td>
-      <td>{{owedByOthers | currency:'USD':'symbol'}}</td>
+      <td class="text-right">{{owedByOthers | currency:'USD':'symbol'}}</td>
     </tr>
   </tbody>
 </table>
