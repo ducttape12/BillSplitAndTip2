@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "billsplit2": {
+    "BillSplitAndTip2": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/billsplit2",
+            "outputPath": "dist/BillSplitAndTip2",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -60,18 +60,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "billsplit2:build"
+            "browserTarget": "BillSplitAndTip2:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "billsplit2:build:production"
+              "browserTarget": "BillSplitAndTip2:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "billsplit2:build"
+            "browserTarget": "BillSplitAndTip2:build"
           }
         },
         "test": {
@@ -105,7 +105,7 @@
         }
       }
     },
-    "billsplit2-e2e": {
+    "BillSplitAndTip2-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -114,11 +114,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "billsplit2:serve"
+            "devServerTarget": "BillSplitAndTip2:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "billsplit2:serve:production"
+              "devServerTarget": "BillSplitAndTip2:serve:production"
             }
           }
         },
@@ -134,5 +134,5 @@
       }
     }
   },
-  "defaultProject": "billsplit2"
+  "defaultProject": "BillSplitAndTip2"
 }

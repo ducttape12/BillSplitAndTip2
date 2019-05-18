@@ -22,4 +22,14 @@ describe('DropdownComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should emit selectedChange when an option is selected', () => {
+    const selectedValue = 12;
+    spyOn(component.selectedChange, 'emit');
+    component.selected = selectedValue;
+
+    component.optionSelected();
+
+    expect(component.selectedChange).toHaveBeenCalledWith(selectedValue);
+  });
 });
