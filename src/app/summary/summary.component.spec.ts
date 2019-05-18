@@ -23,26 +23,7 @@ describe('SummaryComponent', () => {
         expect(component).toBeTruthy();
     });
 
-    it('should hide the summary if the tip owed is not a number and the total tip is valid', () => {
-        component.tipOwed = NaN;
-        component.totalOwed = 1;
-
-        const isVisible = component.summaryIsVisible();
-
-        expect(isVisible).toBe(false);
-    });
-
-    it('should hide the summary if the tip owed is 0 and the total tip is valid', () => {
-        component.tipOwed = 0;
-        component.totalOwed = 1;
-
-        const isVisible = component.summaryIsVisible();
-
-        expect(isVisible).toBe(false);
-    });
-
-    it('should hide the summary if the tip owed is valid and the total tip is not a number', () => {
-        component.tipOwed = 1;
+    it('should hide the summary if the total tip is not a number', () => {
         component.totalOwed = NaN;
 
         const isVisible = component.summaryIsVisible();
@@ -50,17 +31,15 @@ describe('SummaryComponent', () => {
         expect(isVisible).toBe(false);
     });
 
-    it('should hide the summary if the tip owed is valid and total tip from is 0', () => {
-        component.tipOwed = 0;
-        component.totalOwed = 1;
+    it('should hide the summary if the total tip is 0', () => {
+        component.totalOwed = 0;
 
         const isVisible = component.summaryIsVisible();
 
         expect(isVisible).toBe(false);
     });
 
-    it('should show the summary if the tip owed is valid and total tip from is valid', () => {
-        component.tipOwed = 1;
+    it('should show the summary if the total tip is valid', () => {
         component.totalOwed = 1;
 
         const isVisible = component.summaryIsVisible();

@@ -18,9 +18,8 @@ export class SummaryComponent implements OnInit {
   }
 
   summaryIsVisible(): boolean {
-    const tipOwedValid = !isNaN(this.tipOwed) && this.tipOwed > 0;
     const totalOwedValid = !isNaN(this.totalOwed) && this.totalOwed > 0;
 
-    return tipOwedValid && totalOwedValid;
+    return totalOwedValid;
   }
 }
