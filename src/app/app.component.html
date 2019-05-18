@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-12">
-                <app-price-entry id="total" field-description="Bill Total" [(price)]="billTotal"
+                <app-price-entry id="total" field-description="Bill Total" [price]="billTotal" (priceChange)="updateBillTotal($event)"
                     (errorChange)="billTotalError = $event">
                 </app-price-entry>
             </div>

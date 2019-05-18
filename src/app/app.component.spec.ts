@@ -105,4 +105,34 @@ describe('AppComponent', () => {
 
         expect(isBillSplit).toBe(false);
     });
+
+    it('should update the bill total when updateBillTotal is called', () => {
+        component.updateBillTotal(12);
+
+        expect(component.billTotal).toBe(12);
+    });
+
+    it('should set the amount to tip from equal to the new bill total if amount to tip from is undefined', () => {
+        component.updateBillTotal(12);
+
+        expect(component.tipFrom).toBe(12);
+    });
+
+    it('should set the amount to tip from equal to the new bill total if amount to tip from is equal to the old bill total', () => {
+        component.billTotal = 1;
+        component.tipFrom = 1;
+
+        component.updateBillTotal(12);
+
+        expect(component.tipFrom).toBe(12);
+    });
+
+    it('should not set the amount to tip from equal to the new bill total if amount to tip from different than the old bill total', () => {
+        component.billTotal = 1;
+        component.tipFrom = 2;
+
+        component.updateBillTotal(12);
+
+        expect(component.tipFrom).toBe(2);
+    });
 });

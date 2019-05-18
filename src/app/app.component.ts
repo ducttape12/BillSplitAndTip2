@@ -48,4 +48,12 @@ export class AppComponent {
   isBillSplit(): boolean {
     return this.selectedSplit > 1;
   }
+
+  updateBillTotal(newTotal: number): void {
+    if(typeof(this.tipFrom) === 'undefined' || this.tipFrom === this.billTotal) {
+      this.tipFrom = newTotal;
+    }
+
+    this.billTotal = newTotal;
+  }
 }
