@@ -1,8 +1,8 @@
 {
-  "name": "BillSplitAndTip2",
-  "short_name": "BillSplitAndTip2",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "name": "Bill Split and Tip",
+  "short_name": "Bill Split and Tip",
+  "theme_color": "#78c2ad",
+  "background_color": "#ffffff",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
