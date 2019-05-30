@@ -1,16 +1,16 @@
 # Bill Split and Tip 2
 
-Easily calculate your tip, bill total, and how much each person owes when going out to dinner in this Angular 7-based web app!
+Easily calculate your tip, bill total, and how much each person owes when going out to dinner in this Angular-based web app!
+
+It's also a PWA!  Add it to your phone's home screen to use it offline!
 
 ## Demo
 
-[Click here to run this in your browser now]()
+[Click here to run this in your browser now](https://billsplitandtip.keithott.com/)
 
 ## Building the project
 
-Install [Angular 7](https://angular.io/guide/quickstart) and then run `npm install`.
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
+Install [Angular 8](https://angular.io/guide/quickstart) and then run `npm install`.
 
 ## Development server
 
@@ -22,7 +22,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).  It's configured to run tests on Chrome, Firefox, and Edge.
 
 ## More Apps
 
